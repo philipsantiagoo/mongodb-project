@@ -1,40 +1,40 @@
 // 02_insert.js — Povoamento de dados para o sistema de doação e transplante
-use orgaos_db
+use("orgaos_db");
 
 // Limpa quaisquer documentos existentes para permitir reexecução segura do script
-db.doadores.deleteMany({})
-db.receptores.deleteMany({})
-db.hospitais.deleteMany({})
-db.medicos.deleteMany({})
-db.transplantes.deleteMany({})
+db.doadores.deleteMany({});
+db.receptores.deleteMany({});
+db.hospitais.deleteMany({});
+db.medicos.deleteMany({});
+db.transplantes.deleteMany({});
 
 function randomChoice(array) {
-  return array[Math.floor(Math.random() * array.length)]
-}
+  return array[Math.floor(Math.random() * array.length)];
+};
 
 function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 function sample(array, count) {
-  const copy = array.slice()
-  const result = []
+  const copy = array.slice();
+  const result = [];
   while (result.length < count && copy.length) {
-    const index = Math.floor(Math.random() * copy.length)
-    result.push(copy.splice(index, 1)[0])
-  }
-  return result
-}
+    const index = Math.floor(Math.random() * copy.length);
+    result.push(copy.splice(index, 1)[0]);
+  };
+  return result;
+};
 
 function randomDate(startYear, endYear) {
-  const start = new Date(startYear, 0, 1).getTime()
-  const end = new Date(endYear, 11, 31).getTime()
-  return new Date(randomInt(start, end))
-}
+  const start = new Date(startYear, 0, 1).getTime();
+  const end = new Date(endYear, 11, 31).getTime();
+  return new Date(randomInt(start, end));
+};
 
 function formatCPF(number) {
-  return number.toString().padStart(11, "0")
-}
+  return number.toString().padStart(11, "0");
+};
 
 const nomes = [
   "Ana Beatriz", "Carlos Eduardo", "Daniela Silva", "Eduardo Santos", "Fernanda Costa",
@@ -47,7 +47,7 @@ const nomes = [
   "Pietro Oliveira", "Raissa Costa", "Samuel Marques", "Tainá Pires", "Ubirajara Rocha",
   "Vanessa Santos", "Wesley Ribeiro", "Ximena Dias", "Yara Lima", "Zezinho Alves",
   "Adriana Nogueira", "Bruno Cesar", "Cecília Santos", "Diego Martins", "Elaine Souza"
-]
+];
 
 const cidades = [
   { cidade: "Recife", estado: "PE", cep: "50000-000" },
@@ -60,35 +60,35 @@ const cidades = [
   { cidade: "Garanhuns", estado: "PE", cep: "55200-000" },
   { cidade: "Santa Cruz do Capibaribe", estado: "PE", cep: "55190-000" },
   { cidade: "Igarassu", estado: "PE", cep: "53600-000" }
-]
+];
 
-const tiposSanguineos = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"]
-const orgaosLista = ["rim", "figado", "coracao", "pulmao", "pancreas", "intestino"]
-const condicoes = ["excelente", "boa", "regular"]
-const tipoDoador = ["vivo", "post-mortem"]
-const statusReceptor = ["aguardando", "em_transplante", "transplantado", "obito"]
-const resultadoTransplante = ["sucesso", "rejeicao", "obito"]
-const crossmatch = ["negativo", "positivo"]
+const tiposSanguineos = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
+const orgaosLista = ["rim", "figado", "coracao", "pulmao", "pancreas", "intestino"];
+const condicoes = ["excelente", "boa", "regular"];
+const tipoDoador = ["vivo", "post-mortem"];
+const statusReceptor = ["aguardando", "em_transplante", "transplantado", "obito"];
+const resultadoTransplante = ["sucesso", "rejeicao", "obito"];
+const crossmatch = ["negativo", "positivo"];
 const especialidades = [
   "cirurgia_transplante", "nefrologia", "cardiologia", "pneumologia", "imunologia",
   "hepatologia", "cirurgia_toracica", "anestesiologia"
-]
+];
 
 const habilitacoesHospitais = [
   "transplante_renal", "transplante_cardiaco", "transplante_pulmonar",
   "transplante_hepatico", "transplante_pancreatico"
-]
+];
 
-const hospitais = []
-const medicos = []
-const doadores = []
-const receptores = []
-const transplantes = []
+const hospitais = [];
+const medicos = [];
+const doadores = [];
+const receptores = [];
+const transplantes = [];
 
 // Hospitais — cria 10 hospitais com habilitações variadas
 for (let i = 0; i < 10; i++) {
-  const endereco = randomChoice(cidades)
-  const habilitacoes = sample(habilitacoesHospitais, randomInt(2, 4))
+  const endereco = randomChoice(cidades);
+  const habilitacoes = sample(habilitacoesHospitais, randomInt(2, 4));
   hospitais.push({
     _id: new ObjectId(),
     nome: `Hospital ${["Santa", "São", "Nossa Senhora", "Clínica", "Centro"] [i % 5]} ${["Vida", "Esperança", "Salvador", "Saúde", "Integrado"][i % 5]}`,
@@ -108,15 +108,15 @@ for (let i = 0; i < 10; i++) {
     leitos_transplante: randomInt(10, 40),
     equipes: [],
     criado_em: new Date()
-  })
-}
+  });
+};
 
-db.hospitais.insertMany(hospitais)
+db.hospitais.insertMany(hospitais);
 
 // Médicos — cria 50 médicos e distribui por hospitais
 for (let i = 0; i < 50; i++) {
-  const hospital = randomChoice(hospitais)
-  const especialidadesMedico = sample(especialidades, randomInt(1, 3))
+  const hospital = randomChoice(hospitais);
+  const especialidadesMedico = sample(especialidades, randomInt(1, 3));
   const medico = {
     _id: new ObjectId(),
     nome: randomChoice(nomes),
@@ -130,25 +130,25 @@ for (let i = 0; i < 50; i++) {
       email: `dr${i + 1}@medicos.com.br`
     },
     criado_em: new Date()
-  }
-  medicos.push(medico)
-  hospital.equipes.push(medico._id)
-}
+  };
+  medicos.push(medico);
+  hospital.equipes.push(medico._id);
+};
 
-db.medicos.insertMany(medicos)
+db.medicos.insertMany(medicos);
 
 // Doadores — cria 50 doadores com órgãos disponíveis
 for (let i = 0; i < 50; i++) {
-  const tipo = randomChoice(tipoDoador)
-  const cidade = randomChoice(cidades)
-  const hla = sample(["A1", "A2", "A3", "B7", "B8", "B12", "DR4", "DR11", "DR15", "DQ2", "DQ6"], randomInt(3, 6))
+  const tipo = randomChoice(tipoDoador);
+  const cidade = randomChoice(cidades);
+  const hla = sample(["A1", "A2", "A3", "B7", "B8", "B12", "DR4", "DR11", "DR15", "DQ2", "DQ6"], randomInt(3, 6));
   const orgaosDisponiveis = sample(orgaosLista, randomInt(1, 2)).map(orgao => ({
     orgao,
     lado: orgao === "rim" ? randomChoice(["direito", "esquerdo"]) : null,
     condicao: randomChoice(condicoes),
     data_coleta: randomDate(2024, 2026),
     disponivel: Math.random() > 0.2
-  }))
+  }));
   const doador = {
     _id: new ObjectId(),
     nome: randomChoice(nomes),
@@ -171,16 +171,16 @@ for (let i = 0; i < 50; i++) {
     orgaos_disponiveis: orgaosDisponiveis,
     hospital_origem: randomChoice(hospitais)._id,
     criado_em: new Date()
-  }
-  doadores.push(doador)
+  };
+  doadores.push(doador);
 }
 
-db.doadores.insertMany(doadores)
+db.doadores.insertMany(doadores);
 
 // Receptores — cria 50 receptores em fila de espera
 for (let i = 0; i < 50; i++) {
-  const cidade = randomChoice(cidades)
-  const hla = sample(["A1", "A2", "A3", "B7", "B8", "B12", "DR4", "DR11", "DR15", "DQ2", "DQ6"], randomInt(3, 6))
+  const cidade = randomChoice(cidades);
+  const hla = sample(["A1", "A2", "A3", "B7", "B8", "B12", "DR4", "DR11", "DR15", "DQ2", "DQ6"], randomInt(3, 6));
   const receptor = {
     _id: new ObjectId(),
     nome: randomChoice(nomes),
@@ -201,18 +201,18 @@ for (let i = 0; i < 50; i++) {
       motivo_rejeicao: randomChoice(["incompatibilidade sanguínea", "hla insuficiente", "crossmatch positivo", "perda de janela cirúrgica"])
     })),
     criado_em: new Date()
-  }
-  receptores.push(receptor)
+  };
+  receptores.push(receptor);
 }
 
-db.receptores.insertMany(receptores)
+db.receptores.insertMany(receptores);
 
 // Transplantes — cria 50 registros com referências cruzadas
 for (let i = 0; i < 50; i++) {
-  const receptor = randomChoice(receptores)
-  const doador = randomChoice(doadores)
-  const hospital = randomChoice(hospitais)
-  const medico = randomChoice(medicos)
+  const receptor = randomChoice(receptores);
+  const doador = randomChoice(doadores);
+  const hospital = randomChoice(hospitais);
+  const medico = randomChoice(medicos);
   const transplante = {
     _id: new ObjectId(),
     doador_id: doador._id,
@@ -231,15 +231,15 @@ for (let i = 0; i < 50; i++) {
     },
     observacoes: randomChoice(["Procedimento dentro do previsto.", "Monitorar função renal.", "Paciente estável.", "Rejeição leve observada.", "Aguardando primeiros resultados." ]),
     criado_em: new Date()
-  }
-  transplantes.push(transplante)
-}
+  };
+  transplantes.push(transplante);
+};
 
-db.transplantes.insertMany(transplantes)
+db.transplantes.insertMany(transplantes);
 
-print(`Inserção concluída:`)
-print(`  - doadores: ${doadores.length}`)
-print(`  - receptores: ${receptores.length}`)
-print(`  - hospitais: ${hospitais.length}`)
-print(`  - medicos: ${medicos.length}`)
-print(`  - transplantes: ${transplantes.length}`)
+print(`Inserção concluída:`);
+print(`  - doadores: ${doadores.length}`);
+print(`  - receptores: ${receptores.length}`);
+print(`  - hospitais: ${hospitais.length}`);
+print(`  - medicos: ${medicos.length}`);
+print(`  - transplantes: ${transplantes.length}`);
