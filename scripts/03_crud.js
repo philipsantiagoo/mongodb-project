@@ -56,8 +56,6 @@ db.medicos.updateOne(
 print("5. updateOne (SAVE/UPSERT): Médico garantido no banco via upsert.");
 
 // 6. RENAMECOLLECTION (Item 27)
-// Renomeia a coleção para um padrão de histórico e depois retorna (para manter compatibilidade)
-db.transplantes.renameCollection("historico_transplantes_temp");
-print("6. renameCollection: Coleção transplantes renomeada temporariamente. Novo nome: 'historico_transplantes_temp'.");
-db.historico_transplantes_temp.renameCollection("transplantes");
-print("   renameCollection: Coleção restaurada para 'transplantes'.");
+// Renomeia a coleção para um padrão de histórico
+db.transplantes.renameCollection("historico_transplantes");
+print("6. renameCollection: Coleção transplantes renomeada temporariamente. Novo nome: 'historico_transplantes'.");
