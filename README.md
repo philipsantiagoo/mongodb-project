@@ -168,13 +168,13 @@ load("scripts/05_queries_advanced.js")
 | 18 | `FUNCTION` | 05_queries_advanced.js | ⬜ |
 | 19 | `PRETTY` | 04_queries_basic.js | ⬜ |
 | 20 | `ALL` | 04_queries_basic.js | ⬜ |
-| 21 | `SET` | 03_crud.js | ⬜ |
+| 21 | `SET` | 03_crud.js | ✅ |
 | 22 | `TEXT` | 04_queries_basic.js | ⬜ |
 | 23 | `SEARCH` | 04_queries_basic.js | ⬜ |
 | 24 | `FILTER` | 05_queries_advanced.js | ⬜ |
-| 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ⬜ |
-| 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ⬜ |
-| 27 | `RENAMECOLLECTION` | 03_crud.js | ⬜ |
+| 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ✅ |
+| 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ✅ |
+| 27 | `RENAMECOLLECTION` | 03_crud.js | ✅ |
 | 28 | `COND` | 05_queries_advanced.js | ⬜ |
 | 29 | `LOOKUP` | 05_queries_advanced.js | ⬜ |
 | 30 | `FINDONE` | 04_queries_basic.js | ⬜ |
