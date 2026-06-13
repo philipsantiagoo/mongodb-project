@@ -140,7 +140,7 @@ mongosh < scripts/05_queries_advanced.js
 
 | # | Comando | Script | ✅ |
 |---|---------|--------|----|
-| 1 | `USE` | 01_setup.js | ⬜ |
+| 1 | `USE` | 01_setup.js | ✅ |
 | 2 | `FIND` | 04_queries_basic.js | ⬜ |
 | 3 | `SIZE` | 04_queries_basic.js | ⬜ |
 | 4 | `AGGREGATE` | 05_queries_advanced.js | ⬜ |
