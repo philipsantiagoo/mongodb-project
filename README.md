@@ -36,8 +36,8 @@ O esquema é propositalmente rico para explorar os 31 itens da checklist com con
 
 | Fase | Descrição | Responsável |
 |------|-----------|-------------|
-| **1 - Modelagem** | Definir coleções, campos, relacionamentos e índices | - |
-| **2 - Setup** | Configurar ambiente MongoDB, criar banco e coleções | - |
+| **1 - Modelagem** | Definir coleções, campos, relacionamentos e índices | Philip |
+| **2 - Setup** | Configurar ambiente MongoDB, criar banco e coleções | Philip |
 | **3 - Inserção** | Popular coleções com dados realistas (mínimo 20 docs cada) | - |
 | **4 - CRUD** | Scripts de update, delete, rename, save | - |
 | **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | - |
