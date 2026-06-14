@@ -40,7 +40,7 @@ O esquema é propositalmente rico para explorar os 31 itens da checklist com con
 | **2 - Setup** | Configurar ambiente MongoDB, criar banco e coleções | Philip |
 | **3 - Inserção** | Popular coleções com dados realistas | Vinícius |
 | **4 - CRUD** | Scripts de update, delete, rename, save | Arthur |
-| **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | - |
+| **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | Gabriel |
 | **5b - Consultas avançadas** | aggregate, match, group, sum, avg, max, lookup, mapReduce | - |
 | **6 - Documentação** | Montar documento final com descrição e evidências (prints) | - |
 
@@ -149,20 +149,20 @@ load("scripts/05_queries_advanced.js")
 | # | Comando | Script | ✅ |
 |---|---------|--------|----|
 | 1 | `USE` | 01_setup.js | ✅ |
-| 2 | `FIND` | 04_queries_basic.js | ⬜ |
+| 2 | `FIND` | 04_queries_basic.js | ✅ |
 | 3 | `SIZE` | 04_queries_basic.js | ⬜ |
 | 4 | `AGGREGATE` | 05_queries_advanced.js | ⬜ |
 | 5 | `MATCH` | 05_queries_advanced.js | ⬜ |
-| 6 | `PROJECT` | 04_queries_basic.js | ⬜ |
+| 6 | `PROJECT` | 04_queries_basic.js | ✅ |
 | 7 | `GTE` | 04_queries_basic.js | ⬜ |
 | 8 | `GROUP` | 05_queries_advanced.js | ⬜ |
 | 9 | `SUM` | 05_queries_advanced.js | ⬜ |
 | 10 | `COUNTDOCUMENTS` | 04_queries_basic.js | ⬜ |
 | 11 | `MAX` | 05_queries_advanced.js | ⬜ |
 | 12 | `AVG` | 05_queries_advanced.js | ⬜ |
-| 13 | `EXISTS` | 04_queries_basic.js | ⬜ |
-| 14 | `SORT` | 04_queries_basic.js | ⬜ |
-| 15 | `LIMIT` | 04_queries_basic.js | ⬜ |
+| 13 | `EXISTS` | 04_queries_basic.js | ✅ |
+| 14 | `SORT` | 04_queries_basic.js | ✅ |
+| 15 | `LIMIT` | 04_queries_basic.js | ✅ |
 | 16 | `$WHERE` | 04_queries_basic.js | ⬜ |
 | 17 | `MAPREDUCE` | 05_queries_advanced.js | ⬜ |
 | 18 | `FUNCTION` | 05_queries_advanced.js | ⬜ |
@@ -171,13 +171,13 @@ load("scripts/05_queries_advanced.js")
 | 21 | `SET` | 03_crud.js | ✅ |
 | 22 | `TEXT` | 04_queries_basic.js | ⬜ |
 | 23 | `SEARCH` | 04_queries_basic.js | ⬜ |
-| 24 | `FILTER` | 05_queries_advanced.js | ⬜ |
+| 24 | `FILTER` | 05_queries_advanced.js | ✅ |
 | 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ✅ |
 | 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ✅ |
 | 27 | `RENAMECOLLECTION` | 03_crud.js | ✅ |
 | 28 | `COND` | 05_queries_advanced.js | ⬜ |
 | 29 | `LOOKUP` | 05_queries_advanced.js | ⬜ |
-| 30 | `FINDONE` | 04_queries_basic.js | ⬜ |
+| 30 | `FINDONE` | 04_queries_basic.js | ✅ |
 | 31 | `ADDTOSET` | 05_queries_advanced.js | ⬜ |
 
 ---
