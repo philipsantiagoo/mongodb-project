@@ -39,7 +39,7 @@ O esquema é propositalmente rico para explorar os 31 itens da checklist com con
 | **1 - Modelagem** | Definir coleções, campos, relacionamentos e índices | Philip |
 | **2 - Setup** | Configurar ambiente MongoDB, criar banco e coleções | Philip |
 | **3 - Inserção** | Popular coleções com dados realistas | Vinícius |
-| **4 - CRUD** | Scripts de update, delete, rename, save | - |
+| **4 - CRUD** | Scripts de update, delete, rename, save | Arthur |
 | **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | - |
 | **5b - Consultas avançadas** | aggregate, match, group, sum, avg, max, lookup, mapReduce | - |
 | **6 - Documentação** | Montar documento final com descrição e evidências (prints) | - |
@@ -125,11 +125,19 @@ net start MongoDB
 mongosh
 
 # Rodar um script específico
+# (Linux)
 mongosh < scripts/01_setup.js
 mongosh < scripts/02_insert.js
 mongosh < scripts/03_crud.js
 mongosh < scripts/04_queries_basic.js
 mongosh < scripts/05_queries_advanced.js
+
+# Windows
+load("scripts/01_setup.js")
+load("scripts/02_insert.js")
+load("scripts/03_crud.js")
+load("scripts/04_queries_basic.js")
+load("scripts/05_queries_advanced.js")
 ```
 
 > ⚠️ Execute sempre na ordem numérica. Cada script depende do anterior.
@@ -160,13 +168,13 @@ mongosh < scripts/05_queries_advanced.js
 | 18 | `FUNCTION` | 05_queries_advanced.js | ⬜ |
 | 19 | `PRETTY` | 04_queries_basic.js | ⬜ |
 | 20 | `ALL` | 04_queries_basic.js | ⬜ |
-| 21 | `SET` | 03_crud.js | ⬜ |
+| 21 | `SET` | 03_crud.js | ✅ |
 | 22 | `TEXT` | 04_queries_basic.js | ⬜ |
 | 23 | `SEARCH` | 04_queries_basic.js | ⬜ |
 | 24 | `FILTER` | 05_queries_advanced.js | ⬜ |
-| 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ⬜ |
-| 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ⬜ |
-| 27 | `RENAMECOLLECTION` | 03_crud.js | ⬜ |
+| 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ✅ |
+| 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ✅ |
+| 27 | `RENAMECOLLECTION` | 03_crud.js | ✅ |
 | 28 | `COND` | 05_queries_advanced.js | ⬜ |
 | 29 | `LOOKUP` | 05_queries_advanced.js | ⬜ |
 | 30 | `FINDONE` | 04_queries_basic.js | ⬜ |
