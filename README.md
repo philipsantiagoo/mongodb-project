@@ -150,27 +150,27 @@ load("scripts/05_queries_advanced.js")
 |---|---------|--------|----|
 | 1 | `USE` | 01_setup.js | ✅ |
 | 2 | `FIND` | 04_queries_basic.js | ✅ |
-| 3 | `SIZE` | 04_queries_basic.js | ⬜ |
+| 3 | `SIZE` | 04_queries_basic.js | ✅ |
 | 4 | `AGGREGATE` | 05_queries_advanced.js | ⬜ |
 | 5 | `MATCH` | 05_queries_advanced.js | ⬜ |
 | 6 | `PROJECT` | 04_queries_basic.js | ✅ |
-| 7 | `GTE` | 04_queries_basic.js | ⬜ |
+| 7 | `GTE` | 04_queries_basic.js | ✅ |
 | 8 | `GROUP` | 05_queries_advanced.js | ⬜ |
 | 9 | `SUM` | 05_queries_advanced.js | ⬜ |
-| 10 | `COUNTDOCUMENTS` | 04_queries_basic.js | ⬜ |
+| 10 | `COUNTDOCUMENTS` | 04_queries_basic.js | ✅ |
 | 11 | `MAX` | 05_queries_advanced.js | ⬜ |
 | 12 | `AVG` | 05_queries_advanced.js | ⬜ |
 | 13 | `EXISTS` | 04_queries_basic.js | ✅ |
 | 14 | `SORT` | 04_queries_basic.js | ✅ |
 | 15 | `LIMIT` | 04_queries_basic.js | ✅ |
-| 16 | `$WHERE` | 04_queries_basic.js | ⬜ |
+| 16 | `$WHERE` | 04_queries_basic.js | ✅ |
 | 17 | `MAPREDUCE` | 05_queries_advanced.js | ⬜ |
 | 18 | `FUNCTION` | 05_queries_advanced.js | ⬜ |
-| 19 | `PRETTY` | 04_queries_basic.js | ⬜ |
-| 20 | `ALL` | 04_queries_basic.js | ⬜ |
+| 19 | `PRETTY` | 04_queries_basic.js | ✅ |
+| 20 | `ALL` | 04_queries_basic.js | ✅ |
 | 21 | `SET` | 03_crud.js | ✅ |
-| 22 | `TEXT` | 04_queries_basic.js | ⬜ |
-| 23 | `SEARCH` | 04_queries_basic.js | ⬜ |
+| 22 | `TEXT` | 04_queries_basic.js | ✅ |
+| 23 | `SEARCH` | 04_queries_basic.js | ✅ |
 | 24 | `FILTER` | 05_queries_advanced.js | ✅ |
 | 25 | `UPDATEONE/UPDATEMANY` | 03_crud.js | ✅ |
 | 26 | `UPDATEONE/INSERTONE` (SAVE) | 03_crud.js | ✅ |
