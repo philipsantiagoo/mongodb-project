@@ -35,9 +35,6 @@
 ![Queries básicas 1](../assets/img/04_queries_basic/1.png)
 ![Queries básicas 2](../assets/img/04_queries_basic/2.png)
 ![Queries básicas 3](../assets/img/04_queries_basic/3.png)
-![Queries básicas 4](../assets/img/04_queries_basic/4.png)
-![Queries básicas 5](../assets/img/04_queries_basic/5.png)
-
 
 ## Queries Advanced
 
