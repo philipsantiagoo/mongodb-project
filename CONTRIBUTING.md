@@ -33,6 +33,7 @@ Nomes de branch sugeridos por fase:
 | 5a - Consultas básicas | `feat/fase-5a-queries-basic` |
 | 5b - Consultas avançadas | `feat/fase-5b-queries-advanced` |
 | 6 - Documentação | `feat/fase-6-docs` |
+| 7 - Prints | `feat/fase-7-prints` |
 
 ---
 

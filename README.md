@@ -42,7 +42,8 @@ O esquema é propositalmente rico para explorar os 31 itens da checklist com con
 | **4 - CRUD** | Scripts de update, delete, rename, save | Arthur |
 | **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | Gabriel |
 | **5b - Consultas avançadas** | aggregate, match, group, sum, avg, max, lookup, mapReduce | Philip |
-| **6 - Documentação** | Montar documento final com descrição e evidências (prints) | - |
+| **6 - Documentação** | Montar documento final com descrição | Felipe Augusto |
+| **7 - Prints** | Estruturar os prints de comprovação dos resultados | - |
 
 > Preencher a coluna "Responsável" conforme a divisão acordada pelo grupo.
 
