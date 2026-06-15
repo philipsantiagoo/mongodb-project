@@ -43,7 +43,7 @@ O esquema é propositalmente rico para explorar os 31 itens da checklist com con
 | **5a - Consultas básicas** | find, findOne, sort, limit, filter, projection, exists | Gabriel |
 | **5b - Consultas avançadas** | aggregate, match, group, sum, avg, max, lookup, mapReduce | Philip |
 | **6 - Documentação** | Montar documento final com descrição | Felipe Augusto |
-| **7 - Prints** | Estruturar os prints de comprovação dos resultados | - |
+| **7 - Prints** | Estruturar os prints de comprovação dos resultados | Felipe Mateus |
 
 > Preencher a coluna "Responsável" conforme a divisão acordada pelo grupo.
 
@@ -67,19 +67,46 @@ As fases 4, 5a e 5b dependem da fase 3 estar concluída. Comunique no grupo ante
 
 ```
 mongodb-organs/
-├── README.md
-├── CONTRIBUTING.md
+├── assets/
+│   ├── img/ # Screenshots dos processos
+│   │   ├── 01_setup/ 
+│   │   │   ├── setup_colecoes.png
+│   │   │   └── setup_final.png
+│   │   ├── 02_insert/ 
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 3.png
+│   │   │   ├── 4.png
+│   │   │   ├── 5.png
+│   │   │   ├── 6.png
+│   │   │   └── 7.png
+│   │   ├── 03_crud/
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   └── 3.png
+│   │   ├── 04_queries_basic/ 
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   └── 3.png
+│   │   └── 05_queries_advanced/ 
+│   │       ├── 1.png
+│   │       ├── 2.png
+│   │       ├── 3.png
+│   │       ├── 4.png
+│   │       └── 5.png
+│   └── PRINTS.md
 ├── docs/
-│   ├── modelagem.md          # Descrição das coleções e campos
-│   └── projeto_final.pdf     # Documento de entrega
+│   ├── Projeto FInal.pdf # Documento de entrega
+│   ├── document.md
+│   └── modelagem.md # Descrição das coleções e campos
 ├── scripts/
-│   ├── 01_setup.js           # Criação do banco e coleções
-│   ├── 02_insert.js          # Inserção de dados
-│   ├── 03_crud.js            # Update, delete, rename
-│   ├── 04_queries_basic.js   # find, findOne, sort, limit, exists...
+│   ├── 01_setup.js # Criação do banco e coleções
+│   ├── 02_insert.js # Inserção de dados
+│   ├── 03_crud.js # Update, delete, rename
+│   ├── 04_queries_basic.js # find, findOne, sort, limit, exists...
 │   └── 05_queries_advanced.js # aggregate, group, lookup, mapReduce...
-└── assets/
-    └── prints/               # Screenshots das consultas no terminal
+├── CONTRIBUTING.md
+└── README.md
 ```
 
 ---
