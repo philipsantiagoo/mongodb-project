@@ -56,7 +56,7 @@ Cada membro do grupo assume uma fase. As fases 5a e 5b podem ser feitas por pess
 Sugestão de ordem de execução:
 
 ```
-Fase 1 → Fase 2 → Fase 3 → Fase 4 → Fase 5a → Fase 5b → Fase 6
+Fase 1 → Fase 2 → Fase 3 → Fase 4 → Fase 5a → Fase 5b → Fase 6 → Fase 7
 ```
 
 As fases 4, 5a e 5b dependem da fase 3 estar concluída. Comunique no grupo antes de abrir PRs.
